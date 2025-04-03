@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SERVER="https://ayhan-dev.online//api.php"
+SERVER="https://ayhan-dev.online/api.php"
 FILE_PATH="/tmp/t-5988-bvn55.sh"
 
 if [ "$1" == "tnp" ] && [ "$2" != "" ]; then
