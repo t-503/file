@@ -17,5 +17,5 @@ if [ "$1" == "tnp" ] && [ "$2" != "" ]; then
         echo "Failed to download file."
     fi
 else
-    echo "Usage: $0 kip <file_id>"
+    echo "Usage: $0 tnp -<id>"
 fi
