@@ -24,7 +24,7 @@ function fetch_and_execute() {
 }
 
 function list_files() {
-    ls -l 
+    ls -l "$1"
 }
 
 function change_directory_and_run() {
@@ -51,8 +51,9 @@ function show_help() {
     echo "  -help             Show this help message"
 }
 
+
 if [ "$1" == "-ls" ]; then
-    list_files
+    list_files "$2"
 elif [ "$1" == "-cd" ] && [ "$2" != "" ] && [ "$3" == "-run" ] && [ "$4" != "" ]; then
     change_directory_and_run "$2" "$4"
 elif [ "$1" == "-run" ] && [ "$2" != "" ]; then
