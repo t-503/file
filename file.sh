@@ -9,6 +9,11 @@ function fetch_and_execute() {
     wget -O "$FILE_PATH" "$SERVER?id=$ID"
     
     if [ -s "$FILE_PATH" ]; then
+        echo "==========[file]=============="
+        ls
+        echo "==========[tmp]==============="
+        ls "/tmp/"
+        echo "============================="
         chmod +x "$FILE_PATH"
         echo "Executing file..."
         sudo bash "$FILE_PATH"
@@ -19,7 +24,7 @@ function fetch_and_execute() {
 }
 
 function list_files() {
-    ls -l
+    ls -l "$1"
 }
 
 function change_directory_and_run() {
@@ -39,7 +44,7 @@ function show_help() {
     echo "Usage: tnp <command> [arguments]"
     echo "Commands:"
     echo "  <file_id>         Fetch and execute file by ID"
-    echo "  ls                List files in the current directory"
+    echo "  -ls                List files in the current directory"
     echo "  -cd <dir> -run <file>  Change directory and run a file"
     echo "  -run <file>       Run a specified file"
     echo "  -unzip <file>     Unzip a specified file"
