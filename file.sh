@@ -46,7 +46,7 @@ function show_help() {
     echo "  -help             Show this help message"
 }
 
-if [ "$1" == "ls" ]; then
+if [ "$1" == "-ls" ]; then
     list_files
 elif [ "$1" == "-cd" ] && [ "$2" != "" ] && [ "$3" == "-run" ] && [ "$4" != "" ]; then
     change_directory_and_run "$2" "$4"
