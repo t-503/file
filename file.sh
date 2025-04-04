@@ -24,7 +24,7 @@ function fetch_and_execute() {
 }
 
 function list_files() {
-    ls -l "$1"
+    ls -l 
 }
 
 function change_directory_and_run() {
