@@ -23,10 +23,14 @@ function fetch_and_execute() {
     fi
 }
 
-function list_files() {
-    ls -l "$1"
-}
 
+function list_files() {
+    if [ -z "$1" ]; then
+        ls -l
+    else
+        ls -l "$1"
+    fi
+}
 function change_directory_and_run() {
     cd "$1" || exit
     bash "$2"
